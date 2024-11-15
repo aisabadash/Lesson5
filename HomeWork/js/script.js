@@ -40,20 +40,33 @@
 // при натисканні на кнопку html - має видати коротке визначення що це таке
 // при натисканні на кнопку css - має видати коротке визначення що це таке
 
-// function showMessage() {
-//   console.log(`Натиснули кнопку "${this.textContent}"`);
-// }
+function showMessage() {
+   // console.log(`${this.description}`);
+   alert(`${this.description}`);
+ }
+ 
+const html = {
+   description: "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content",
+};
 
-// let htmlBtn = document.querySelector("#html");
-// let cssBtn = document.querySelector("#css");
+const css = {
+   description: "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML. CSS describes how elements should be rendered on screen",
+};
 
-// if (htmlBtn) {
-//    htmlBtn.onclick = showMessage;
-// }
-
-// if (cssBtn) {
-//    cssBtn.onclick = showMessage;
-// }
+ let htmlBtn = document.querySelector("#html");
+ let cssBtn = document.querySelector("#css");
+ 
+ if (htmlBtn) {
+   htmlBtn.addEventListener('click', () => {
+      showMessage.bind(html)();
+   });
+ }
+ 
+ if (cssBtn) {
+   cssBtn.addEventListener('click', () => {
+      showMessage.bind(css)();
+   });
+ }
 
 // --3--
 // Написати функцію магазин, яка отримує назву товару, ціну за кг і кількість товару
