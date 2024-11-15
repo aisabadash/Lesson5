@@ -218,3 +218,37 @@
 // infoCar.showInfo.bind(car2)();
 // infoCar.showInfo.call(car2);
 // infoCar.showInfo.apply(car2);
+
+
+
+
+// const obj = {
+//   sayHello () {
+//     function inner() {
+//       console.log(this);
+//     }
+//     inner();
+//   },
+//   sayHelloArrow () {
+//     const inner = () => {
+//       console.log(this);
+//     }
+//     inner();
+//   }
+// };
+
+// obj.sayHello();
+// obj.sayHelloArrow();
+
+
+
+
+// const obj1 = {name: "Anna"};
+
+// const obj2 = {
+//   sayHello() {
+//     console.log(this.name);
+//   }
+// };
+
+// obj2.sayHello.call(obj1);
